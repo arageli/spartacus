@@ -1,12 +1,12 @@
 {
   "defaultCommandTimeout": 10000,
-  "baseUrl": "http://localhost:4200",
+  "baseUrl": "https://spartacus.c39j2-walkersde1-d3-public.model-t.cc.commerce.ondemand.com",
   "projectId": "k3nmep",
   "requestTimeout": 15000,
   "env": {
     "CLIENT_ID": "mobile_android",
     "CLIENT_SECRET": "secret",
-    "API_URL": "https://dev-com-17.accdemo.b2c.ydev.hybris.com:9002",
+    "API_URL": "https://api.c39j2-walkersde1-d3-public.model-t.cc.commerce.ondemand.com",
     "ORDER_HISTORY_WAIT_TIME": 15000
   }
 }
