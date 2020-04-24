@@ -58,11 +58,11 @@ export class TabParagraphContainerComponent
   // todo: document breaking change - return observable with array of observables
   components$: Observable<Observable<any>[]> = this.componentData.data$.pipe(
     distinctUntilChanged((x, y) => x?.components === y?.components),
-    map(data =>
-      (data?.components ?? '').split(' ').map(component =>
+    map((data) =>
+      (data?.components ?? '').split(' ').map((component) =>
         this.cmsService.getComponentData<any>(component).pipe(
           distinctUntilChanged(),
-          map(tab => {
+          map((tab) => {
             if (!tab) {
               return undefined;
             }
@@ -116,7 +116,7 @@ export class TabParagraphContainerComponent
   }
 
   private getTitleParams(children: QueryList<ComponentWrapperDirective>) {
-    children.forEach(comp => {
+    children.forEach((comp) => {
       if (comp.cmpRef && comp.cmpRef.instance.tabTitleParam$) {
         this.tabTitleParams.push(comp.cmpRef.instance.tabTitleParam$);
       } else {
